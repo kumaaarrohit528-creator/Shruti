@@ -18,13 +18,6 @@ from PURVIMUSIC.utils.inline import help_pannel, private_panel, start_panel
 from config import BANNED_USERS
 from strings import get_string
 
-EFFECT_ID = [
-    5104841245755180586,
-    5104841245755180586,
-    5107584321108051014,
-    5107584321108051014,
-]
-
 
 @app.on_message(filters.command(["start"]) & filters.private & ~BANNED_USERS)
 @LanguageStart
