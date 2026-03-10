@@ -144,16 +144,16 @@ async def welcome(client, message: Message):
 
                 out = start_panel(_)
                 await message.reply_photo(
-                    photo=config.START_IMG_URL,
-                    has_spoiler=True,
-                    caption=_["start_3"].format(
-                        message.from_user.first_name,
-                        app.mention,
-                        message.chat.title,
-                        app.mention,
-                    ),
-                    parse_mode=ParseMode.DEFAULT,
-                    reply_markup=InlineKeyboardMarkup(out),
+                  photo=config.START_IMG_URL,
+                  has_spoiler=True,
+                  caption=_["start_3"].format(
+                    message.from_user.first_name,
+                    app.mention,
+                    message.chat.title,
+                    app.mention,
+                  ),
+                  parse_mode=ParseMode.DEFAULT,
+                  reply_markup=InlineKeyboardMarkup(out),
                 )
                 await add_served_chat(message.chat.id)
                 await message.stop_propagation()
